@@ -4,7 +4,7 @@ Author URI: https://84361749.com/
 Plugin URI: https://wordpress.org/plugins/memory-usage-bar/
 Github: https://github.com/ayangyuan/Wordpress-Plugin-Memory-Usage-Bar.git
 Tags: memory, memory-limit,  server, info
-Requires at least: 1.0.0
+Requires at least: 1.0.1
 Tested up to: 4.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
