@@ -16,7 +16,7 @@
  * GitHub URI:  https://github.com/ayangyuan/Wordpress-Plugin-Memory-Usage-Bar
  * Author URI:  https://squaredaway.studio/wordpress-plugin-memory-usage-bar/
  * Author:      Mr.ING 
- * Version:     1.0.1
+ * Version:     1.0.2
  * Text Domain: memory-usage-bar
  * Domain Path: /res/lang
  * License:     GPL-2.0+
@@ -79,26 +79,18 @@ if ( is_admin() ) {
          return $content;
     }
 
-
-/**
- * Add links to the plugin action row.
- */
-if ( ! defined( 'MR_ING_MUB_PLUGIN_FILE' ) ) {define( 'MR_ING_MUB_PLUGIN_FILE', __FILE__ );}
-function mr_ing_mub_plugin_actions( $links, $file ) {
-
-        if ( plugin_basename( MR_ING_MUB_PLUGIN_FILE ) === $file ) {
-
-                $new_links = array(
-                        'support'    => '<a href = "http://wordpress.org/support/plugin/memory_usage_bar">' . __( 'Support' ) . '</a>',
-                        'donate'     => '<a href = "https://squaredaway.studio/donate/">' . __( 'Donate') . '</a>',
-                        'contribute' => '<a href = "https://github.com/ayangyuan/Wordpress-Plugin-Memory-Usage-Bar">' . __( 'Contribute' ) . '</a>',
-                );
-
-                $links = array_merge( $links, $new_links );
-        }
-        return $links;
+/** Add links to the plugin action row. */
+function mr_ing_mub_plugin_row_meta( $links, $file ) {
+  if ( plugin_basename( __FILE__ ) === $file ) {
+    $new_links = array(
+    'support'    => '<a href = "http://wordpress.org/support/plugin/memory-usage-bar">' . __( 'Support' ) . '</a>',
+    'donate'     => '<a href = "https://squaredaway.studio/donate/">' . __( 'Donate') . '</a>',
+    'contribute' => '<a href = "https://github.com/ayangyuan/Wordpress-Plugin-Memory-Usage-Bar">' . __( 'Contribute' ) . '</a>',
+     );
+     $links = array_merge( $links, $new_links );
+   }
+   return $links;
 }
-add_filter( 'plugin_row_meta', 'mr_ing_mub_plugin_actions', 10, 2 );
-
+add_filter( 'plugin_row_meta', 'mr_ing_mub_plugin_row_meta', 10, 2 );
 
 }

@@ -52,8 +52,8 @@ So, if you've got some cool feature that you'd like to implement into the plugin
 
 == Screenshots ==
 
-1. It shows the length of your posts, and it also be able to sort.
-2. If you can't find it or you want to hidden it temporarily, go and uncheck it
+1. At the top of screen, never miss any suspicious activities.
+2. More details than just memory usage
 
 == Frequently Asked Questions ==
 
@@ -64,7 +64,7 @@ I have no idea.
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 
 * Released:
         * Add screenshot, logo and banner.
